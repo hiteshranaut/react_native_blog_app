@@ -6,6 +6,7 @@ export default (reducer , actions , initialState) => {
         const [state , dispatch ] = useReducer(reducer , initialState);
 
         // action = { addBloPost: (dispatch) }
+                
         const boundActions = {};
         for(let key in actions) {
             boundActions[key] = actions[key](dispatch);
